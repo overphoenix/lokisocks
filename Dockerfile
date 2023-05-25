@@ -12,9 +12,7 @@ RUN apt install lokinet -y
 
 RUN apt install sudo --no-install-recommends libcap2-bin -y
 RUN mkdir /var/lib/lokinet/conf.d
-COPY ./data/00-exit.ini /var/lib/lokinet/conf.d/00-exit.ini
 COPY ./data/lokinet.ini /var/lib/lokinet/conf.d/lokinet.ini
-
 
 # Dante
 ENV DANTE_VER=1.4.3
